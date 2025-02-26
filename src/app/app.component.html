@@ -1,22 +1,19 @@
 <header>
-   <h1>Control stock</h1>
+  <h1>Control de stock</h1>
 </header>
 <main>
   <aside>
-    <!--Formulario de registro de productos-->
-    <app-product-form></app-product-form>
+    <!-- formulario -->
+    <app-product-form (sendProduct)="getDataForm($event)"></app-product-form>
   </aside>
   <div class="content">
     <section>
-      <!--Lista de productos-->
-      <app-product-list></app-product-list>
+      <!-- lista productos -->
+      <app-product-list [products]="productsList"></app-product-list>
     </section>
     <section>
-      <!--total-->
-      <app-total></app-total>
+      <!-- total  -->
+      <app-total [products]="productsList"></app-total>
     </section>
-
   </div>
- 
- 
 </main>
