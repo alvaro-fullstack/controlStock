@@ -12,8 +12,6 @@ import { Iproduct } from './interfaces/iproduct.interface';
 })
 export class AppComponent {
   productsList: Iproduct[] = [
-    { title: 'Balon baloncesto', price: 64.99, quantity: 10 },
-    { title: 'Zapatillas de running', price: 140, quantity: 25 },
   ];
 
   getDataForm(event: Iproduct) {
