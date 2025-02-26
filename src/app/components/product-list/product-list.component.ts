@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interfaces/iproduct.interface';
+import { Iproduct } from '../../interfaces/iproduct.interface';
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +8,7 @@ import { IProduct } from '../../interfaces/iproduct.interface';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  @Input() products: IProduct[] = [];
+  @Input() products: Iproduct[] = [];
   texto: string = ""
 
   ngOnChanges() {

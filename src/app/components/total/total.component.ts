@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { IProduct } from '../../interfaces/iproduct.interface';
+import { Iproduct } from '../../interfaces/iproduct.interface';
 
 @Component({
   selector: 'app-total',
@@ -8,12 +8,12 @@ import { IProduct } from '../../interfaces/iproduct.interface';
   styleUrl: './total.component.css'
 })
 export class TotalComponent {
-  products = input<IProduct[]>([]);
+  products = input<Iproduct[]>([]);
   totalprice: number = 0;
   totalQuantity: number = 0;
 
   ngOnChanges() {
-    //this.totalQuantity = this.products.reduce((ac: number, product: IProduct) => ac + product.quantity, 0)
+    //this.totalQuantity = this.products.reduce((ac: number, product: Iproduct) => ac + product.quantity, 0)
     //console.log(this.totalQuantity)
 
     for (let product of this.products()) {
